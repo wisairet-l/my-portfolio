@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tara | Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #fff0f6;
+    }
+
+    /* انیمیشن ورود */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* منو */
+    .navbar {
+      background-color: #ff6fae;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #ff4f97;
+    }
+
+    /* بخش اصلی */
+    .hero {
+      text-align: center;
+      margin-top: 120px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1 {
+      color: #ff4f97;
+      font-size: 42px;
+    }
+
+    p {
+      color: #555;
+      font-size: 18px;
+    }
+
+    /* کارت ها */
+    .card {
+      margin: 30px auto;
+      width: 80%;
+      max-width: 420px;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .title {
+      color: #ff4f97;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #ff4f97;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #ffe0ef;
+      color: #d63384;
+      padding: 5px 10px;
+      border-radius: 10px;
+      margin: 3px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- منو -->
+  <div class="navbar">
+    <a href="#home">خانه</a>
+    <a href="#about">درباره من</a>
+    <a href="#skills">مهارت ها</a>
+    <a href="#contact">تماس</a>
+  </div>
+
+  <!-- خانه -->
+  <div class="hero" id="home">
+    <h1>🩷 سلام</h1>
+    <p>این سایت شخصی منه</p>
+  </div>
+
+  <!-- درباره من -->
+  <div class="card" id="about">
+    <div class="title">درباره من</div>
+    <p>
+    🌸 من تارام <br>
+      به دنیای طراحی وب علاقه دارم و دارم قدم به قدم یاد میگیرم
+    </p>
+    <p>:علاقه مندی ها</p>
+    <span class="tag">🍰 انیمه</span>
+    <span class="tag">🍉 بازی (Stardew / Sims)</span>
+    <span class="tag">🎵 موسیقی</span>
+    <span class="tag">🦔 طبیعت</span>
+    <span class="tag">🎸 گیتار</span>
+  </div>
+
+  <!-- مهارت ها -->
+  <div class="card" id="skills">
+    <div class="title">مهارت ها</div>
+
+    <p>HTML 🌱 → بلدم</p>
+    <p>CSS 🎨 → بلدم</p>
+    <p>JavaScript ⚡ → در حال یادگیری</p>
+    <p>گیتار 🎸 → در حال یادگیری</p>
+  </div>
+
+  <!-- تماس -->
+  <div class="card" id="contact">
+    <div class="title">تماس</div>
+
+    <p>💌 www.wisairet@gmail.com</p>
+
+    <a href="mailto:www.wisairet@gmail.com">
+      ارسال ایمیل 💌
+    </a>
+  </div>
+
+</body>
+</html>
