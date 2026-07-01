@@ -17,27 +17,32 @@ body {
   position: fixed;
   inset: 0;
   background: #FFE4EE;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   z-index: 999;
+
+  opacity: 1;
   transition: opacity 1s ease;
 }
 
 .intro h1 {
-  font-size: 40px;
+  font-size: 42px;
 }
 
 .intro p {
   margin-top: 10px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 /* 🌸 MAIN SITE */
 .site {
   display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 /* 🌸 NAVBAR */
@@ -47,6 +52,7 @@ body {
   align-items: center;
 
   padding: 15px 20px;
+
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
 
@@ -58,7 +64,7 @@ body {
   font-weight: bold;
 }
 
-/* links */
+/* LINKS */
 .links a {
   margin-left: 15px;
   text-decoration: none;
@@ -85,16 +91,16 @@ body {
   opacity: 0.7;
 }
 
-/* 🌸 EXPLORE BUTTON */
+/* 🌸 BUTTON */
 button {
   margin-top: 25px;
   padding: 12px 20px;
+
   border: none;
   border-radius: 25px;
 
   background: #FF5FA2;
   color: white;
-  font-size: 14px;
 
   cursor: pointer;
   transition: 0.3s;
@@ -130,12 +136,11 @@ button:hover {
   border-radius: 15px;
 
   min-width: 120px;
-  text-align: center;
 
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 
-  transition: 0.3s;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .card:hover {
