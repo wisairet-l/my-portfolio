@@ -1,57 +1,64 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Tara | Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tara</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="navbar">
-  <a href="index.html">خانه</a>
-  <a href="projects.html">پروژه ها</a>
-</div>
-
-<div class="card reveal">
-  <img src="profile.jpg" class="profile">
-  <h1>🩷 سلام</h1>
-  <p>☕️ این سایت شخصی منه</p>
-</div>
-
-<div class="card reveal">
-  <h2>درباره من</h2>
-  <p>من تارام 🌸 دارم طراحی وب یاد میگیرم</p>
-</div>
-
-<div class="card reveal">
-  <h2>علاقه مندی ها</h2>
-
-  <span class="tag">🍰 انیمه</span>
-  <span class="tag">🎵 موسیقی</span>
-  <span class="tag">🎸 گیتار</span>
-  <span class="tag">🌿 طبیعت</span>
-  <span class="tag">🍔 آشپزی</span>
-</div>
-
-<div class="card reveal">
-  <h2>مهارت ها</h2>
-
-  <div class="skills">
-    <div class="skill">🌱 HTML</div>
-    <div class="skill">🎨 CSS</div>
-    <div class="skill">⚡ JavaScript</div>
-    <div class="skill">🍕 آشپزی</div>
-    <div class="skill">🍓 ریاضی</div>
-    <div class="skill">🔭 فیزیک</div>
+  <!-- 🌸 INTRO SCREEN -->
+  <div class="intro" id="intro">
+    <h1>Hi 🩷</h1>
+    <p>A place where I share what I love ☕️</p>
   </div>
-</div>
 
-<div class="card reveal">
-  <h2>تماس</h2>
-  <p>💌 www.wisairet@gmail.com</p>
-</div>
+  <!-- 🌸 MAIN WEBSITE -->
+  <div class="site" id="site">
 
-<script src="script.js"></script>
+    <!-- NAVBAR (فقط Home + Contact) -->
+    <nav class="navbar">
+      <div class="logo">Tara 🌸</div>
+
+      <div class="links">
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Welcome 💖</h1>
+      <p>A cozy little world made by me</p>
+
+      <button onclick="explore()">✨ Explore</button>
+    </section>
+
+    <!-- INTERESTS -->
+    <section class="interests">
+
+      <h2>Interests</h2>
+
+      <div class="grid">
+
+        <div class="card">🍰 Anime</div>
+        <div class="card">🎮 Games</div>
+        <div class="card">🌿 Nature</div>
+        <div class="card">🎵 Music</div>
+        <div class="card">🎸 Guitar</div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
