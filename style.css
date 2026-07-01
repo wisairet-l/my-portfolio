@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(-45deg, #fff0f6, #ffd6e7, #ffeaf3, #ffc2dc);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  scroll-behavior: smooth;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* اسکرول انیمیشن */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* منو */
+.navbar {
+  background: rgba(255,111,174,0.9);
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.15);
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.3);
+}
+
+/* کارت ها */
+.card {
+  margin: 25px auto;
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* پروفایل */
+.profile {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* تگ ها */
+.tag {
+  display: inline-block;
+  background: #ffe0ef;
+  color: #d63384;
+  padding: 6px 10px;
+  border-radius: 12px;
+  margin: 4px;
+  font-size: 14px;
+}
+
+/* مهارت ها */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.skill {
+  background: #ffe0ef;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  color: #d63384;
+
+  opacity: 0;
+  transform: scale(0.7);
+  animation: popIn 0.6s ease forwards;
+}
+
+/* تاخیر ورود یکی یکی */
+.skill:nth-child(1) { animation-delay: 0.1s; }
+.skill:nth-child(2) { animation-delay: 0.2s; }
+.skill:nth-child(3) { animation-delay: 0.3s; }
+.skill:nth-child(4) { animation-delay: 0.4s; }
+.skill:nth-child(5) { animation-delay: 0.5s; }
+.skill:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* hover نرم */
+.skill:hover {
+  transform: translateY(-4px) scale(1.08);
+  background: #ffd1e6;
+  transition: 0.3s ease;
+}
