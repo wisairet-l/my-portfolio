@@ -1,40 +1,94 @@
 window.addEventListener("load", () => {
 
-  const intro = document.getElementById("intro");
-  const site = document.getElementById("site");
+    /* =========================
+       🌸 INTRO SYSTEM (SAFE FADE)
+    ========================= */
 
-  // 🌸 بعد از 3 ثانیه intro محو میشه
-  setTimeout(() => {
+    const intro = document.getElementById("intro");
+    const app = document.getElementById("app");
 
-    intro.style.opacity = "0";
+    if (intro) {
+        setTimeout(() => {
+            intro.style.opacity = "0";
 
-    // بعد از کامل fade شدن
-    setTimeout(() => {
-      intro.style.display = "none";
+            setTimeout(() => {
+                intro.remove();
 
-      // سایت رو نشون بده
-      site.style.display = "block";
+                if (app) {
+                    app.style.opacity = "1";
+                }
 
-      // ورود نرم
-      setTimeout(() => {
-        site.style.opacity = "1";
-      }, 50);
+            }, 900);
 
-    }, 1000);
+        }, 3000);
+    }
 
-  }, 3000);
+    /* =========================
+       🌸 CARD ANIMATION SYSTEM
+    ========================= */
+
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card, index) => {
+
+        card.style.opacity = "0";
+        card.style.transform = "translateY(10px)";
+
+        setTimeout(() => {
+
+            card.style.transition = "0.5s ease";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+
+        }, index * 70);
+
+    });
 
 });
 
+/* =========================
+   🌸 MUSIC SYSTEM (NO ERROR)
+========================= */
 
-// 🌸 Explore button animation
-function explore() {
-  const hero = document.querySelector(".hero");
+const music = document.getElementById("music");
+const btn = document.getElementById("music-btn");
 
-  hero.style.transform = "scale(0.96)";
-  hero.style.transition = "0.25s";
+let isPlaying = false;
 
-  setTimeout(() => {
-    hero.style.transform = "scale(1)";
-  }, 250);
+if (music && btn) {
+
+    btn.addEventListener("click", () => {
+
+        if (!isPlaying) {
+
+            music.volume = 0.4;
+
+            music.play().catch(() => {
+                // prevents autoplay crash
+            });
+
+            btn.innerText = "⏸ Pause";
+            isPlaying = true;
+
+        } else {
+
+            music.pause();
+            btn.innerText = "🎵 Music";
+            isPlaying = false;
+
+        }
+
+    });
+
 }
+
+/* =========================
+   🌸 EXTRA SAFETY (OPTIONAL UX)
+========================= */
+
+// Prevent broken links weird behavior
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        // smooth UX hook (future upgrade)
+    });
+});
